@@ -3,10 +3,9 @@ import CafeInfo from "./CafeInfo/CafeInfo";
 import VoteOptions from "./VoteOptions/VoteOptions";
 import VoteStats from "./VoteStats/VoteStats";
 
-import { Votes } from "../types/votes";
+import type { Votes, VoteType } from "../types/votes";
 
 import css from "./App.module.css";
-import type { VoteType } from "../types/votes";
 
 export default function App() {
   const [votes, setVotes] = useState<Votes>({
@@ -15,16 +14,19 @@ export default function App() {
     bad: 0,
   });
 
-  const handleVoteGood = (types: VoteType) => {
+  const handleVoteGood = (type?: VoteType) => {
     setVotes({ ...votes, good: votes.good + 1 });
+    console.log(type);
   };
 
-  const handleVoteNeutral = (types: VoteType) => {
+  const handleVoteNeutral = (type?: VoteType) => {
     setVotes({ ...votes, neutral: votes.neutral + 1 });
+    console.log(type);
   };
 
-  const handleVoteBad = (types: VoteType) => {
+  const handleVoteBad = (type?: VoteType) => {
     setVotes({ ...votes, bad: votes.bad + 1 });
+    console.log(type);
   };
 
   const resetVotes = () => {
