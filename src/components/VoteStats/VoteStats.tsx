@@ -1,6 +1,6 @@
 import styles from "./VoteStats.module.css";
 
-function VoteStats() {
+export default function VoteStats() {
   return (
     <div className={styles.container}>
       <p className={styles.stat}>
@@ -21,5 +21,3 @@ function VoteStats() {
     </div>
   );
 }
-
-export default VoteStats;

@@ -1,5 +1,3 @@
-function Notification() {
+export default function Notification() {
   return <></>;
 }
-
-export default Notification;

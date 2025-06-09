@@ -1,11 +1,7 @@
-// interface Votes {
-//   good: number;
-//   neutral: number;
-//   bad: number;
-// }
+export interface Votes {
+  good: number;
+  neutral: number;
+  bad: number;
+}
 
-// // type VoteType{
-
-// // }
-
-// export  Votes ;
+export type VoteType = "good" | "neutral" | "bad";

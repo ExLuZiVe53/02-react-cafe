@@ -1,6 +1,6 @@
 import css from "./VoteOptions.module.css";
 
-function VoteOptions() {
+export default function VoteOptions() {
   return (
     <div className={css.container}>
       <button className={css.button}>Good</button>
@@ -10,5 +10,3 @@ function VoteOptions() {
     </div>
   );
 }
-
-export default VoteOptions;
