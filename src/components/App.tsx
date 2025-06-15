@@ -1,18 +1,19 @@
-import { useState } from "react";
+// import { useState } from "react";
 import CafeInfo from "./CafeInfo/CafeInfo";
 import VoteOptions from "./VoteOptions/VoteOptions";
 import VoteStats from "./VoteStats/VoteStats";
 
-import type { Votes } from "../types/votes";
+// import type { Votes } from "../types/votes";
 
 import css from "./App.module.css";
 
 export default function App() {
-  const [votes, setVotes] = useState<Votes>({
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  });
+  // const [votes, setVotes] = useState<Votes>({
+  //   good: 0,
+  //   neutral: 0,
+  //   bad: 0,
+  // }
+  // );
 
   // const handleVoteGood = (type: VoteType) => {
   //   setVotes({ ...votes, good: votes.good + 1 });
@@ -33,22 +34,22 @@ export default function App() {
   //   setVotes({ good: 0, neutral: 0, bad: 0 });
   // };
 
-  const handleVote = (type: keyof Votes) => {
-    return setVotes({
-      ...votes,
-      [type]: votes[type] + 1,
-    });
-  };
+  // const handleVote = (type: keyof Votes) => {
+  //   return setVotes({
+  //     ...votes,
+  //     [type]: votes[type] + 1,
+  //   });
+  // };
 
   return (
     <>
       <CafeInfo />
       <VoteOptions
-        // good={handleVoteGood}
-        // neutral={handleVoteNeutral}
-        // bad={handleVoteBad}
-        // reset={resetVotes}
-        vote={handleVote}
+      // good={handleVoteGood}
+      // neutral={handleVoteNeutral}
+      // bad={handleVoteBad}
+      // reset={resetVotes}
+      // vote={handleVote}
       />
 
       <VoteStats />
