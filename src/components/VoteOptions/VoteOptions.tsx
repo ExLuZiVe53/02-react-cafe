@@ -1,18 +1,20 @@
-import type { ClickProp } from "../../types/votes";
 import css from "./VoteOptions.module.css";
+
+interface VoteOptionsProps {
+  goodProp: () => void;
+  neutralProp: () => void;
+  badProp: () => void;
+  // onVote: () => string;
+  onReset: () => void;
+}
 
 export default function VoteOptions({
   goodProp,
   neutralProp,
   badProp,
-  //   onVote,
+  // onVote,
   onReset,
-}: ClickProp) {
-  //   const onVote = (event: React.MouseEvent<HTMLButtonElement>) => {
-  //     console.log(type);
-  //     console.log(event);
-  //   };
-
+}: VoteOptionsProps) {
   return (
     <div className={css.container}>
       <button className={css.button} onClick={goodProp}>

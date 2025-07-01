@@ -5,11 +5,3 @@ export interface Votes {
 }
 
 export type VoteType = "good" | "neutral" | "bad";
-
-export interface ClickProp {
-  goodProp: () => string;
-  neutralProp: () => string;
-  badProp: () => string;
-  // onVote: () => void;
-  onReset: () => void;
-}

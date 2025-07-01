@@ -33,12 +33,13 @@ export default function App() {
     setVotes({ good: 0, neutral: 0, bad: 0 });
   };
 
-  // const handleVote = (type: keyof Votes) => {
+  // const handleVote = (key: keyof Votes) => {
   //   setVotes({
   //     ...votes,
-  //     [type]: votes[type] + 1,
+  //     [key]: votes[key] + 1,
   //   });
-  //   console.log(type);
+  //   console.log(key);
+  //   // console.log(type);
   // };
 
   return (
@@ -52,7 +53,11 @@ export default function App() {
         // onVote={handleVote}
       />
 
-      <VoteStats />
+      <VoteStats
+        goodStats={votes.good}
+        neutralStats={votes.neutral}
+        badStats={votes.bad}
+      />
       <div className={css.app}></div>
     </>
   );

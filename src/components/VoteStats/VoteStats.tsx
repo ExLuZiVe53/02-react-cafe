@@ -1,16 +1,26 @@
 import styles from "./VoteStats.module.css";
 
-export default function VoteStats() {
+interface VoteStatsProps {
+  goodStats: number;
+  neutralStats: number;
+  badStats: number;
+}
+
+export default function VoteStats({
+  goodStats,
+  neutralStats,
+  badStats,
+}: VoteStatsProps) {
   return (
     <div className={styles.container}>
       <p className={styles.stat}>
-        Good: <strong>0</strong>
+        Good: <strong>{goodStats}</strong>
       </p>
       <p className={styles.stat}>
-        Neutral: <strong>0</strong>
+        Neutral: <strong>{neutralStats}</strong>
       </p>
       <p className={styles.stat}>
-        Bad: <strong>0</strong>
+        Bad: <strong>{badStats}</strong>
       </p>
       <p className={styles.stat}>
         Total: <strong>0</strong>
