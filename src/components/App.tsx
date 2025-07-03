@@ -33,12 +33,12 @@ export default function App() {
     setVotes({ good: 0, neutral: 0, bad: 0 });
   };
 
-  // const handleVote = (key: keyof Votes) => {
+  // const handleVote = (type: keyof Votes) => {
   //   setVotes({
   //     ...votes,
-  //     [key]: votes[key] + 1,
+  //     [type]: votes[type] + 1,
   //   });
-  //   console.log(key);
+  //   console.log(type);
   //   // console.log(type);
   // };
 
