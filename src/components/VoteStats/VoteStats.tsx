@@ -4,6 +4,7 @@ interface VoteStatsProps {
   goodStats: number;
   neutralStats: number;
   badStats: number;
+  // total: () => void;
 }
 
 export default function VoteStats({
