@@ -14,20 +14,22 @@ export default function App() {
     bad: 0,
   });
 
-  // const handleVoteGood = () => {
-  //   setVotes({ ...votes, good: votes.good + 1 });
-  //   // console.log(type);
-  // };
+  const type: string[] = ["good", "neutral", "bad"];
 
-  // const handleVoteNeutral = () => {
-  //   setVotes({ ...votes, neutral: votes.neutral + 1 });
-  //   // console.log(type);
-  // };
+  const handleVoteGood = (type: VoteType) => {
+    setVotes({ ...votes, good: votes.good + 1 });
+    console.log(type);
+  };
 
-  // const handleVoteBad = () => {
-  //   setVotes({ ...votes, bad: votes.bad + 1 });
-  //   // console.log(type);
-  // };
+  const handleVoteNeutral = (type: VoteType) => {
+    setVotes({ ...votes, neutral: votes.neutral + 1 });
+    console.log(type);
+  };
+
+  const handleVoteBad = (type: VoteType) => {
+    setVotes({ ...votes, bad: votes.bad + 1 });
+    console.log(type);
+  };
 
   const resetVotes = () => {
     setVotes({ good: 0, neutral: 0, bad: 0 });
@@ -40,37 +42,16 @@ export default function App() {
   //   });
   // };
 
-  const type: Array<string> = ["good", "neutral", "bad"];
-
-  const handleVote = (type: string[]) => {
-    type.map((oneType: string) => {
-      switch (oneType) {
-        case "good":
-          setVotes({ ...votes, good: votes.good + 1 });
-          break;
-        case "neutral":
-          setVotes({ ...votes, neutral: votes.neutral + 1 });
-          break;
-        case "bad":
-          setVotes({ ...votes, bad: votes.bad + 1 });
-          break;
-        default:
-          throw new Error("Invalid type");
-      }
-      console.log(oneType);
-    });
-  };
-
   return (
     <>
       <CafeInfo />
       <VoteOptions
-        // goodProp={handleVoteGood}
-        // neutralProp={handleVoteNeutral}
-        // badProp={handleVoteBad}
+        goodProp={handleVoteGood}
+        neutralProp={handleVoteNeutral}
+        badProp={handleVoteBad}
         type={type}
         onReset={resetVotes}
-        onVote={handleVote}
+        // onVote={handleVote}
       />
 
       <VoteStats
